@@ -16,7 +16,8 @@ try
     const port = process.env["PORT"];
 
     app.get("/", async (req, res) => {
-        res.send(JSON.stringify(process.env))
+	res.setHeader("Content-Type", "application/json");
+        res.send(JSON.stringify(process.env, null, "\n"));
     })
 
     app.listen(port, () => {

@@ -1,0 +1,6 @@
+---
+applications:
+- name: vault-app
+  buildpacks:
+    - https://github.com/AP-Hunt/paas-secrets-buildpack
+    - nodejs_buildpack
